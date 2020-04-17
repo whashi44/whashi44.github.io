@@ -2,16 +2,20 @@
 <html lang="en">
 
 <head>
+	<!-- This is for the boot strap link to use their style -->
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
 	<link href="styles.css" rel="stylesheet">
-	<title>Portfolio by Wataru Hashimoto</title>
+	<title>Programming Playground</title>
+	<!-- This is for the mathjax to show latex equation -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body class="blue">
 	<div class="jumbotron text-center">
-		<h1> Portfolio by Wataru Hashimoto </h1>
+		<h1>Wataru Hashimoto's Programming Playground </h1>
 	</div>
-
+	<!-- 
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 		<a class="navbar-brand" href="#">Navbar</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -30,18 +34,21 @@
 				</li>
 			</ul>
 		</div>
-	</nav>
+	</nav> -->
 
 	<div class="container" style="margin-top:30px">
 		<div class="row">
 			<div class="col-sm-4">
-				<h2>About Me</h2>
-				<h5>Photo of me:</h5>
-				<div class="fakeimg">Fake Image</div>
-				<p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-				<h3>Some Links</h3>
-				<p>Lorem ipsum dolor sit ame.</p>
-				<ul class="nav nav-pills flex-column">
+				<!-- <h5>Photo of me:</h5> -->
+				<img src="hashimoto_picture.jpg" alt="Picture of Wataru" width="135" height="180">
+				<p></p>
+				<h3>About Me:</h3>
+				<p> I started programming because I was too lazy to calculate everything by hand. </p>
+				<p> I continued to learn programming because I was too lazy to copy and paste stuff from files to excel.
+				</p>
+				<p> I ended up loving programming because my life is so much easier and more creative with programming
+				</p>
+				<!-- <ul class="nav nav-pills flex-column">
 					<li class="nav-item">
 						<a class="nav-link active" href="#">Active</a>
 					</li>
@@ -55,24 +62,42 @@
 						<a class="nav-link disabled" href="#">Disabled</a>
 					</li>
 				</ul>
-				<hr class="d-sm-none">
+				<hr class="d-sm-none"> -->
 			</div>
 			<div class="col-sm-8">
-				<h2>TITLE HEADING</h2>
-				<h5>Title description, Dec 7, 2017</h5>
-				<div class="fakeimg">Fake Image</div>
-				<p>Some text..</p>
-				<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-					exercitation ullamco.</p>
+				<h2>Lindemann Index Calculator by Python(<a href="https://github.com/whashi44/lindemann">Github</a>)
+				</h2>
+				<h5>GUI to calculate lindemann index</h5>
+				<p>This python script calculates a lindemann index, which is defined as follows:
+					\[\delta =\frac{2}{N(N-1)} \sum_{i \lt j}\sqrt{\frac{\langle r_{ij}^2 \rangle_t-\langle
+					r_{ij}\rangle_t^2}{\langle r_{ij}\rangle_t}} \] </p>
 				<br>
-				<h2>TITLE HEADING</h2>
-				<h5>Title description, Sep 2, 2017</h5>
-				<div class="fakeimg">Fake Image</div>
-				<p>Some text..</p>
-				<p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-					exercitation ullamco.</p>
+				<p>
+					I had to calculate this value from molecular dynamics simulation dump file and after quick search, I
+					could not find a software or code that does this with my specific condition, so I created one.</p>
+				<p>
+					Then, I got tired of changing the parameters within the code for specific scenarios, so I created a
+					GUI for flexibility, which can be seen in the following GIF.
+				</p>
+				<img src="lindemann.gif" alt="GIF of lindemann Index GUI" width="400" height="300">
+
+
+
+				<h2>Finite Element Analysis by Matlab(<a href="https://github.com/whashi44/MatlabFEA">Github</a>)</h2>
+				<h5>Approximation of 2nd order partial differential equation using matlab</h5>
+				<p>This MATLAB code approximates the solution for the following partial differential equation: <br>
+					\[\frac{\partial p}{\partial t} - \nabla\cdot(\bf{K}\nabla p) = q\]
+					by converting the strong form to weak form using divergent theorem, and approximating the solution
+					using discretization, shape function, Gallerkin's approximation, and Gaussian quadrature.
+					The resulting animation is below, which shows the approximate solution being updated every time step
+					to obtain theoretical solution. <br>
+					<img src="fea.gif" alt="GIF of matlab output" width="400" height="300">
+					<p>GIF output from Matlab, beautiful!!</p>
+					<p>Matlab is great because I didn't have to calculate 40 by 40 by 100 matrix by hand!</p>
+
+				</p>
+
+
 			</div>
 		</div>
 	</div>
