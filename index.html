@@ -38,17 +38,20 @@
 			</ul>
 		</div>
 	</nav> -->
+	<!-- portrait -->
 	<div class="container" style="margin-top:30px">
 		<div class="row">
-			<div class="col-sm-4">
+
+			<div class="col-sm-4" style="margin-top:30px">
 				<!-- <h5>Photo of me:</h5> -->
 				<img src="hashimoto_picture.jpg" alt="Picture of Wataru" width="135" height="180">
 				<p></p>
 				<h3>About Me:</h3>
-				<p> I started programming because I was too lazy to calculate everything by hand. </p>
-				<p> I continued to learn programming because I was too lazy to copy and paste stuff from files to excel.
+				<p> I started programming because calculating huge matrix by hand was tedious. </p>
+				<p> I continued to learn programming because writing script was faster than copy and pasting 100 times.
 				</p>
-				<p> I ended up loving programming because my life is so much easier and more creative with programming
+				<p> I ended up loving programming because my life is filled with my automating scripts and feeling of
+					accomplishment
 				</p>
 				<!-- <ul class="nav nav-pills flex-column">
 					<li class="nav-item">
@@ -66,45 +69,59 @@
 				</ul>
 				<hr class="d-sm-none"> -->
 			</div>
+
+			<!-- First  -->
 			<div class="col-sm-8">
-				<h2>Lindemann Index Calculator by Python(<a href="https://github.com/whashi44/lindemann">Github</a>)
-				</h2>
-				<h5>GUI to calculate lindemann index</h5>
-				<p>This python script calculates a lindemann index, which is defined as follows:
-					\[\delta =\frac{2}{N(N-1)} \sum_{i \lt j}\sqrt{\frac{\langle r_{ij}^2 \rangle_t-\langle
-					r_{ij}\rangle_t^2}{\langle r_{ij}\rangle_t}} \] </p>
-				<br>
-				<p>
-					I had to calculate this value from molecular dynamics simulation dump file and after quick search, I
-					could not find a software or code that does this with my specific condition, so I created one.</p>
-				<p>
-					Then, I got tired of changing the parameters within the code for specific scenarios, so I created a
-					GUI for flexibility, which can be seen in the following GIF.
-				</p>
-				<p><img src="lindemann.gif" alt="GIF of lindemann Index GUI" width="400" height="300">
-				</p>
+				<div class='container' style="margin-top:30px">
+					<h2>Lindemann Index Calculator by Python
+
+					</h2>
+					<h3>GUI to calculate lindemann index</h3>
+					<p>This python script calculates a lindemann index, which is defined as follows:
+						\[\delta =\frac{2}{N(N-1)} \sum_{i \lt j}\sqrt{\frac{\langle r_{ij}^2 \rangle_t-\langle
+						r_{ij}\rangle_t^2}{\langle r_{ij}\rangle_t}} \] </p>
+					<br>
+					<p>
+						I had to calculate this value from molecular dynamics simulation dump file and after quick
+						search, I
+						could not find a software or code that does this with my specific condition, so I created one.
+					</p>
+					<p>
+						Then, changing the parameters to accustom for the specific scenario got tedius, which led to the
+						creation of the GUI to expand the flexibility. The following GIF represents the daily usage.
+					</p>
+					<p><img src="lindemann.gif" alt="GIF of lindemann Index GUI" width="400" height="300">
+					</p>
+					<p></p>
+					<a class="btn btn-info" href="https://github.com/whashi44/lindemann" target="_blank">Github</a>
+
+				</div>
+
+				<div class='container' style="margin-top:30px">
+					<h2>Finite Element Analysis by Matlab
+					</h2>
+					<h3>Approximation of 2nd order partial differential equation using matlab</h3>
+					<p>This MATLAB code approximates the solution for the following partial differential equation: <br>
+						\[\frac{\partial p}{\partial t} - \nabla\cdot(\bf{K}\nabla p) = q\]
+						by converting the strong form to weak form using divergent theorem, and approximating the
+						solution
+						using discretization, shape function, Gallerkin's approximation, and Gaussian quadrature.
+						The resulting animation is below, which shows the approximate solution being updated every time
+						step
+						to obtain theoretical solution. <br>
+						<img src="fea.gif" alt="GIF of matlab output" width="400" height="300">
+						<p>Matlab is great because I didn't have to calculate 40 by 40 by 100 matrix by hand!</p>
+					</p>
+					<a class="btn btn-info" href="https://github.com/whashi44/MatlabFEA" target="_blank">Github</a>
+
+				</div>
+
+				<div class='container' style="margin-top:30px">
 
 
-				<h2>Finite Element Analysis by Matlab(<a href="https://github.com/whashi44/MatlabFEA">Github</a>)</h2>
-				<h5>Approximation of 2nd order partial differential equation using matlab</h5>
-				<p>This MATLAB code approximates the solution for the following partial differential equation: <br>
-					\[\frac{\partial p}{\partial t} - \nabla\cdot(\bf{K}\nabla p) = q\]
-					by converting the strong form to weak form using divergent theorem, and approximating the solution
-					using discretization, shape function, Gallerkin's approximation, and Gaussian quadrature.
-					The resulting animation is below, which shows the approximate solution being updated every time step
-					to obtain theoretical solution. <br>
-					<img src="fea.gif" alt="GIF of matlab output" width="400" height="300">
-					<p>GIF output from Matlab, beautiful!!</p>
-					<p>Matlab is great because I didn't have to calculate 40 by 40 by 100 matrix by hand!</p>
 
-				</p>
-
-
+				</div>
 			</div>
-
-		</div>
-	</div>
-
 </body>
 
 </html>
