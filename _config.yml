@@ -15,12 +15,21 @@
 # in the templates via {{ site.myvariable }}.
 title: Wataru's Portfolio
 email: whashi44@gmail.com
+image: /assets/fea.png
 description: >- # this means to ignore newlines until "baseurl:"
   Portfolio for Wataru Hashimoto
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://whashi.com" # the base hostname & protocol for your site, e.g. http://example.com
+author: Wataru Hashimoto
+logo: /assets/favicon.png
+twitter:
+  username: Wataru_Hashi1
+  card: summary
+
 twitter_username: jekyllrb
 github_username:  whashi44
+linkedin_username: whashimoto
+kaggle_username: wataruhashimoto
 
 # Build settings
 markdown: kramdown
