@@ -1,96 +1,24 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
 
-<head>
-
-    {% if site.google_analytics %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', '{{ site.google_analytics }}');
-    </script>
-    {% endif %}
-    <meta charset="UTF-8">
-
-    <!-- Search Engine optimization, include the meta title, url and so on  -->
-    {% seo %}
-    <!-- For favicon -->
-    <link rel='icon' href="{{site.icon}}">
-    <!-- Other meta tags -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <!-- To show formula in latex format -->
-    <script src=" https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-    <!-- Bootstrap CDN for CSS-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- Bootstrap CDN for JS-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-</head>
+{% include head.html %}
 
 <body>
-    <!-- <a id="skip-to-content" href="#content">Skip to the content.</a> -->
-    <!-- Navigaion bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <!-- For Home button -->
-        <a class="navbar-brand" href="/" style="margin-top: 2px; margin-bottom: 3px">
-            Home
-        </a>
-        <!-- For navbar, or hamburger button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    {% include nav.html %}
 
-        <!-- For the other navigation buttons, highlight when current -->
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="margin-top: 2px">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item {% if page.title == 'About Me' %}active{% endif %}">
-                    <a class="nav-item nav-link " href="/about/">About
-                        Me</a>
-                </li>
-                <li class="nav-item {% if page.title == 'Projects' %}active{% endif %}">
-                    <a class="nav-item nav-link " href="/project/">Projects
-                    </a>
-                </li>
-                <li class="nav-item {% if page.title == 'Contact' %}active{% endif %}">
-                    <a class="nav-item nav-link " href="/contact/">Contact
-                    </a>
-                </li>
-            </ul>
-        </div>
+    {% if page.title == "Home"%}
+    <div class="bg">
+        <h1 class="center">{{site.author}}
+        </h1>
+    </div>
+    {% else %}
+    {% include header.html%}
+    {% endif%}
 
-        </div>
+    {% include footer.html%}
 
-    </nav>
-    <header class="page-header" role="banner">
-        <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-        <h2 class="project-tagline">
-            {{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-        {% if site.github.is_project_page %}
-        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-        {% endif %}
-        {% if site.show_downloads %}
-        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
-        {% endif %}
-    </header>
 
-    <main id="content" class="main-content" role="main">
+    <!-- <main id="content" class="main-content" role="main">
         {{ content }}
     </main>
     <footer class="site-footer">
@@ -98,15 +26,17 @@
         <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a>
             is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
         {% endif %}
-        <!-- <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub
-                Pages</a>.</span> -->
+
         <div class="container">
-            <!-- Copyright, &#169 is trademark, -->
-            <p style="margin-top: 15px; font-size: 14px;">Copyright &#169; {{ site.time | date: '%Y' }}
+
+        </div>
+        <div class="container"> -->
+    <!-- Copyright, &#169 is trademark, -->
+    <!-- <p style="margin-top: 15px; font-size: 14px;">Copyright &#169; {{ site.time | date: '%Y' }}
                 <a href="https://github.com/whashi44/whashi44.github.io">{{ site.author}}</a></p>
         </div>
     </footer>
 
-</body>
+</body> -->
 
 </html>
