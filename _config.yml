@@ -21,7 +21,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://whashi.com" # the base hostname & protocol for your site, e.g. http://example.com
 author: Wataru Hashimoto
-logo: /assets/favicon.png
+icon: /assets/favicon.png
 twitter:
   username: Wataru_Hashi1
   card: summary
@@ -35,7 +35,7 @@ kaggle_username: wataruhashimoto
 markdown: kramdown
 theme: jekyll-theme-cayman
 plugins:
-  - jekyll-feed
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
