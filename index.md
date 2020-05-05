@@ -4,6 +4,7 @@
 
 layout: default
 image: /assets/fea.png
+title: Home
 ---
 
 Hey there
