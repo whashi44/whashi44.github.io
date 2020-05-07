@@ -1,4 +1,5 @@
 <div class="fixed-bottom text-center">
+    {%if page.title=='Home'%}
     <a href="https://www.linkedin.com/in/whashimoto/" target="_blank" title="LinkedIn">
         <i class="fa fa-linkedin fa-2x" style="color:white"></i>
     </a>
@@ -14,4 +15,33 @@
     <a href="mailto:whashi44@gmail.com">
         <i class="fas fa-envelope fa-2x" style="color:white" title="Email"></i>
     </a>
+    {% else %}
+    <a href="https://www.linkedin.com/in/whashimoto/" target="_blank" title="LinkedIn">
+        <i class="fa fa-linkedin fa-2x" style="color:black"></i>
+    </a>
+    <a href="https://github.com/whashi44" target="_blank" title="Github">
+        <i class="fab fa-github fa-2x " style="color:black"></i>
+    </a>
+    <a href="https://www.kaggle.com/wataruhashimoto" target="_blank" title="Kaggle">
+        <i class="fab fa-kaggle fa-2x" style="color:black"></i>
+    </a>
+    <a href="https://twitter.com/Wataru_Hashi1" target="_blank" title="Twitter">
+        <i class="fab fa-twitter fa-2x" style="color:black"></i>
+    </a>
+    <a href="mailto:whashi44@gmail.com">
+        <i class="fas fa-envelope fa-2x" style="color:black" title="Email"></i>
+    </a>
+
+    {% endif %}
+
 </div>
+
+{% if page.title!='Home'%}
+<footer class="site-footer">
+    <div class="container">
+        <!-- Copyright, &#169 is trademark, -->
+        <p style="margin-top: 15px; font-size: 14px;">Copyright &#169; {{ site.time | date: '%Y' }}
+            <a href="https://github.com/whashi44/whashi44.github.io">{{ site.author}}</a></p>
+    </div>
+</footer>
+{% endif %}

@@ -6,37 +6,19 @@
 <body>
     {% include nav.html %}
 
-    {% if page.title == "Home"%}
-    <div class="bg">
-        <h1 class="center">{{site.author}}
-        </h1>
-    </div>
-    {% else %}
     {% include header.html%}
-    {% endif%}
-
-    {% include footer.html%}
 
 
-    <!-- <main id="content" class="main-content" role="main">
+
+    <main id="content" class="main-content" role="main">
         {{ content }}
     </main>
-    <footer class="site-footer">
-        {% if site.github.is_project_page %}
-        <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a>
-            is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
-        {% endif %}
+    {% if site.github.is_project_page %}
+    <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a>
+        is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
+    {% endif %}
+    {% include footer.html%}
 
-        <div class="container">
-
-        </div>
-        <div class="container"> -->
-    <!-- Copyright, &#169 is trademark, -->
-    <!-- <p style="margin-top: 15px; font-size: 14px;">Copyright &#169; {{ site.time | date: '%Y' }}
-                <a href="https://github.com/whashi44/whashi44.github.io">{{ site.author}}</a></p>
-        </div>
-    </footer>
-
-</body> -->
+</body>
 
 </html>
