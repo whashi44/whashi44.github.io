@@ -1,9 +1,8 @@
 ---
-layout: default
+layout: contact
 title: Contact 
 permalink: /contact/
-description: Contact me!
+description: Contact Me   
 ---
 
-Hello! I'm Wataru Hashimoto
 
