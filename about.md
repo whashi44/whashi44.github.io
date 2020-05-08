@@ -5,5 +5,4 @@ permalink: /about/
 description: Learn about me!
 ---
 
-Hello! I'm Wataru Hashimoto
-
+![Picture of Wataru Hashimoto](/assets/images/hashimoto.jpg)
