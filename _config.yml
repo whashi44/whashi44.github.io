@@ -36,6 +36,10 @@ markdown: kramdown
 theme: jekyll-theme-cayman
 plugins:
 
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:title/
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
