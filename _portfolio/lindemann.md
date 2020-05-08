@@ -1,7 +1,7 @@
 ---
 layout: default
-image: /assets/images/lindemann.gif
-title: lindemann
+icon: lindemann.gif
+title: Lindemann Index Calculator
 ---
 
 Hello
