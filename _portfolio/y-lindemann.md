@@ -33,13 +33,10 @@ Based on the formula, the brutal way of saying Lindemann Index is the mathematic
 Suppose you run a molecular dynamics simulation and attempt to melt some material. Based on the visual representation and dump file, you can somewhat tell if the object is melted or not. However, the result is rather conceptual and lack a concrete explanation. In order to account for it, the Lindemann Index is useful because it will quantatively represent the melting point of material in molecular dynamic simulation.  
 
 ## Requirement
-### Python
 - Please perform pip to install the dependencies
 ```shell
 pip install -r /path/to/requirement.txt
 ```
-
-### dump file
 - Please prepare a dump file form lammps, preferably in .lammpstrj with dump style atom or .xyz with dump style xyz
 
 
