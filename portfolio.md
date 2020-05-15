@@ -5,7 +5,8 @@ permalink: /portfolio/
 description: Past projects that I worked on
 ---
 
-  {% for portfolio in site.portfolio %}
+{% for portfolio in site.portfolio %}
+
   <div class="col-sm-3" style="padding-top:20px">
     <div class="card" style="width: 35rem; height: 35rem;">
       <div class="card-body">
